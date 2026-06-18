@@ -27,6 +27,48 @@
             <p id="balance">₹0</p>
         </div>
     </section>
+    <section class="income-section">
+
+    <h2>Income Management</h2>
+
+    <form id="incomeForm">
+
+        <input
+            type="text"
+            id="incomeSource"
+            placeholder="Income Source"
+            required
+        >
+
+        <input
+            type="number"
+            id="incomeAmount"
+            placeholder="Income Amount"
+            required
+        >
+
+        <button type="submit">
+            Add Income
+        </button>
+
+    </form>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Source</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="incomeTableBody"></tbody>
+
+    </table>
+
+</section>
     <!-- Add Expense Form -->
     <section class="quick-add-expense">
         <br>
@@ -92,6 +134,7 @@
         </table>
     </section>
     <script src="js/dashboard.js"></script>
+    <script src="js/income.js"></script>
     <script src="js/expense.js"></script>
 </body>
 </html>
