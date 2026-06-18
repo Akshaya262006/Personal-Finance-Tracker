@@ -50,6 +50,19 @@ header h1{
     display:flex;
     gap:25px;
 }
+/* Theme */
+.dark-mode{
+    background-color:#1e1e1e;
+    color:white;
+}
+/* Theme Button */
+#themeBtn{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    margin:20px;
+}
 .recent-transactions{
     flex:2;
     background:white;
