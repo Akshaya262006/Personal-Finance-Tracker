@@ -9,3 +9,9 @@ function updateDashboard() {
     document.getElementById("balance").innerText ="₹" + balance;
 }
 updateDashboard();
+let health = 0;
+if(totalIncome > 0){
+    health = ((balance / totalIncome) * 100).toFixed(0);
+}
+document.getElementById("financialHealth").innerText =
+health + "%";
