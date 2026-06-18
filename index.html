@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--Header Section-->
+    <!-- Header -->
     <header>
         <h1>Personal Finance Tracker</h1>
         <p>Manage your income and expenses easily</p>
     </header>
-    <!-- Dashboard Section -->
+    <!-- Dashboard Cards -->
     <section class="dashboard">
         <div class="card">
             <h3>Total Income</h3>
@@ -27,6 +27,71 @@
             <p id="balance">₹0</p>
         </div>
     </section>
+    <!-- Add Expense Form -->
+    <section class="quick-add-expense">
+        <br>
+        <form id="expenseForm">
+            <input
+                type="text"
+                id="expenseTitle"
+                placeholder="Expense Title"
+                required
+            >
+            <input
+                type="number"
+                id="expenseAmount"
+                placeholder="Expense Amount"
+                required
+            >
+            <select id="expenseCategory">
+                <option>Food</option>
+                <option>Travel</option>
+                <option>Shopping</option>
+                <option>Bills</option>
+                <option>Other</option>
+            </select>
+            <button type="submit">
+                Add Expense
+            </button>
+        </form>
+    </section>
+    <!-- Transactions + Button -->
+    <section class="bottom-dashboard">
+        <!-- Recent Transactions -->
+        <div class="recent-transactions">
+            <h2>Expense Transactions</h2>
+            <div id="recentTransactions">
+                <!-- Latest 3 expenses appear here -->
+            </div>
+        </div>
+        <!-- View Expenses Button -->
+        <div class="expense-controls">
+            <button id="toggleExpenseBtn">
+                View Expenses
+            </button>
+        </div>
+    </section>
+    <!-- Expense Management Table -->
+    <section
+        class="expense-section"
+        id="expenseSection"
+        style="display:none;"
+    >
+        <h2>Expense Management</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="expenseTableBody"></tbody>
+        </table>
+    </section>
     <script src="js/dashboard.js"></script>
+    <script src="js/expense.js"></script>
 </body>
 </html>
