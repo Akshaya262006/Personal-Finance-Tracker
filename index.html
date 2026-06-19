@@ -1,11 +1,156 @@
-<section id="analytics">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Personal Finance Tracker</h1>
+        <p>Manage your income and expenses easily</p>
+        <button id="themeBtn">
+     Dark Mode
+</button>
+    </header>
+    <!-- Dashboard Cards -->
+    <section class="dashboard">
+        <div class="card">
+            <h3>Total Income</h3>
+            <p id="totalIncome">₹0</p>
+        </div>
+        <div class="card">
+            <h3>Total Expense</h3>
+            <p id="totalExpense">₹0</p>
+        </div>
+        <div class="card">
+            <h3>Balance</h3>
+            <p id="balance">₹0</p>
+        </div>
+        <div class="card">
+    <h3>Financial Health</h3>
+    <p id="financialHealth">0%</p>
+         </div>
+    </section>
+    <section class="income-section">
+
+    <h2>Income Management</h2>
+
+    <form id="incomeForm">
+
+        <input
+            type="text"
+            id="incomeSource"
+            placeholder="Income Source"
+            required
+        >
+
+        <input
+            type="number"
+            id="incomeAmount"
+            placeholder="Income Amount"
+            required
+        >
+
+        <button type="submit">
+            Add Income
+        </button>
+
+    </form>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Source</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="incomeTableBody"></tbody>
+
+    </table>
+
+</section>
+    <!-- Add Expense Form -->
+    <section class="quick-add-expense">
+        <br>
+        <form id="expenseForm">
+            <input
+                type="text"
+                id="expenseTitle"
+                placeholder="Expense Title"
+                required
+            >
+            <input
+                type="number"
+                id="expenseAmount"
+                placeholder="Expense Amount"
+                required
+            >
+            <select id="expenseCategory">
+                <option>Food</option>
+                <option>Travel</option>
+                <option>Shopping</option>
+                <option>Bills</option>
+                <option>Other</option>
+            </select>
+            <button type="submit">
+                Add Expense
+            </button>
+        </form>
+    </section>
+    <!-- Transactions + Button -->
+    <section class="bottom-dashboard">
+        <!-- Recent Transactions -->
+        <div class="recent-transactions">
+            <h2>Expense Transactions</h2>
+            <div id="recentTransactions">
+                <!-- Latest 3 expenses appear here -->
+            </div>
+        </div>
+        <!-- View Expenses Button -->
+        <div class="expense-controls">
+            <button id="toggleExpenseBtn">
+                View Expenses
+            </button>
+        </div>
+    </section>
+    <!-- Expense Management Table -->
+    <section
+        class="expense-section"
+        id="expenseSection"
+        style="display:none;"
+    >
+        <h2>Expense Management</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="expenseTableBody"></tbody>
+        </table>
+    </section>
+  <section id="analytics">
     <h2>Analytics</h2>
-
-    
-
     <canvas id="expenseChart"></canvas>
     <canvas id="barChart"></canvas>
     <canvas id="monthlyChart"></canvas>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="analytics.js"></script>
-</section>
+    </section>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="analytics.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/income.js"></script>
+    <script src="js/expense.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
